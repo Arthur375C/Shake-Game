@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Snake Game</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+	/* Estilo do contêiner de navegação */
+nav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Estilo da lista */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Torna a lista flexível horizontalmente */
+  justify-content: center; /* Centraliza os itens da lista */
+}
+
+/* Estilo dos itens da lista */
+nav ul li {
+  float: left;
+}
+
+/* Estilo dos links */
+nav ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Efeito de hover */
+nav ul li a:hover {
+  background-color: #111;
+}
+
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+    </ul>
+  </nav>
+  
+  <div id="game-container">
+    <canvas id="gc" class="game-canvas" width="400" height="400"></canvas>
+  </div>
+  <div class="keys">
+    <a class="up arr" onclick="Snake.action('up')">
+      <i class="chevron up"></i></a>
+    <br />
+    <a class="left arr" onclick="Snake.action('left')">
+      <i class="chevron left"></i></a>
+    <a class="down arr" onclick="Snake.action('down')">
+      <i class="chevron down"></i></a>
+    <a class="right arr" onclick="Snake.action('right')">
+      <i class="chevron right"></i></a>
+  </div>
+  <script type="text/javascript" src="game.js"></script>
+</body>
+</html>
